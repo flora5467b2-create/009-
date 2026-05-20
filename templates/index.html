@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Site de 009</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<section id="loginPage" class="login-page">
+  <div class="login-box">
+    <h1>009</h1>
+    <p id="formTitle">Connecte-toi à ton compte</p>
+
+    <input id="username" placeholder="Identifiant">
+    <input id="password" type="password" placeholder="Mot de passe">
+
+    <div id="errorMessage" class="error"></div>
+    <div id="successMessage" class="success"></div>
+
+    <button id="mainButton">Se connecter</button>
+    <button id="switchButton" class="secondary">Créer un compte</button>
+  </div>
+</section>
+
+<section id="sitePage" class="site-page">
+  <header>
+    <div class="logo">009</div>
+
+    <nav>
+      <button id="homeButton" class="active">Home</button>
+      <button id="addPasteButton">Add paste</button>
+    </nav>
+
+    <div class="menu">
+      <button id="menuButton">☰</button>
+      <div id="panel" class="panel">
+        <button id="logoutButton">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="welcomeContainer" class="welcome">
+    <h2>Bienvenu sur le site de 009</h2>
+  </div>
+
+  <main id="appContent">
+    <section id="homeSection">
+      <h2>Home</h2>
+      <input id="searchInput" placeholder="Rechercher une page...">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Créé par</th>
+            <th>Vues</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="pasteList"></tbody>
+      </table>
+
+      <div id="pasteDetail" class="detail">
+        <button id="backHomeButton">← Retour</button>
+        <h2 id="detailTitle"></h2>
+        <p id="detailMeta"></p>
+        <p id="detailText"></p>
+      </div>
+    </section>
+
+    <section id="addPasteSection">
+      <h2>Add paste</h2>
+
+      <input id="pasteTitle" placeholder="Titre de la page">
+      <textarea id="pasteText" placeholder="Écris ton texte ici..."></textarea>
+
+      <button id="publishButton">Publier</button>
+      <div id="pasteError" class="error"></div>
+      <div id="publishMessage" class="success"></div>
+    </section>
+  </main>
+</section>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
